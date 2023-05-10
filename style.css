@@ -1,17 +1,29 @@
-* {
-	box-sizing: border-box;
-}
 
 body {
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 }
+.title{
+	background-color: #7e4e02;
+	margin: auto;
+}
+h1{
+	color: rgb(32, 32, 4);
+	text-align: center;
+	margin-top: auto;
+
+}
+
+.container{
+	background-color: #7e4e02;
+}
 
 header {
-	background-color: #333;
-	color: #fff;
+
+	color: #ffffff;
 	padding: 20px;
+	
 }
 
 nav ul {
@@ -41,4 +53,126 @@ main {
 .products article {
 	background-color: #f2f2f2;
 	box-shadow: 1px
+}
+
+.email{
+ border: 5px solid red;
+ background-color: red;
+ border-radius: 5px;
+ padding-top: 10px;
+ padding-left: 5px;
+ padding-right: 5px;
+ margin-bottom: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+ padding-bottom: 10px;
+}
+
+.password{
+	border: 5px solid red;
+	background-color: red;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+
+}
+
+.boton{
+	border: 5px solid red;
+	background-color: red;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+	
+
+}
+.pag_2{
+	border: 0px solid red;
+	background-color: red;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	color: rgb(120, 86, 23);
+	display:inline-block;
+	margin-left: 85%;
+	text-decoration: none;
+
+}
+.form{
+	display: flex;
+	border: 0px solid red;
+	justify-content: center;
+	margin: auto;
+	
+}
+.caja{
+	border-radius: 15px;
+}
+.list-indication{
+	border: 0px solid red;
+	text-decoration: none;
+	margin-top: 50px;
+}
+
+.cart{
+	border: 0px solid red;
+	display: block;
+}
+h2{
+	text-align: center;
+}
+.implemento{
+	border: 0px solid yellow;
+	list-style: none;
+}
+.implemento_li{
+	
+	border-radius: 5px;
+	background-color: rgb(30, 255, 0);
+	margin: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+}
+.remove-from-cart{
+	background-color: red;
+	border-radius: 5px;
+	margin-left: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.total{
+	border: 0px solid yellow;
+	margin-left: 70%;
+}
+.checkout{
+	border: 0px solid yellow;
+	margin-left: 70%;
+	padding: 10px 10px 10px 10px;
+	border-radius: 5px;
+}
+.add-to-cart{
+	margin: auto;
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.price{
+	border: 0px solid teal;
+	text-align: center;
+	align-items: center;
 }
