@@ -5,14 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>Implementos informáticos</h1>
-		<nav>
+	<header class="container">
+		<div class="title">
+			<h1>WGDP</h1>
+		</div>
+
+		<nav class="list-indication">
 			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Productos</a></li>
-				<li><a href="#">Carro de compras</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="#" class="boton">Inicio</a></li>
+				<li><a href="#" class="boton">Productos</a></li>
+				<li><a href="#" class="boton">Carro de compras</a></li>
+				<li><a href="#" class="boton">Contacto</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -44,14 +47,15 @@
 		
 		<aside class="cart">
 			<h2>Carro de compras</h2>
-			<ul>
-				<li>Implemento 1 - $100 <button class="remove-from-cart">Eliminar</button></li>
-				<li>Implemento 2 - $200 <button class="remove-from-cart">Eliminar</button></li>
-				<li>Implemento 3 - $300 <button class="remove-from-cart">Eliminar</button></li>
+			<ul class="implemento">
+				<li class="implemento_li">Implemento 1 - $100 <button class="remove-from-cart">Eliminar</button></li>
+				<li class="implemento_li">Implemento 2 - $200 <button class="remove-from-cart">Eliminar</button></li>
+				<li class="implemento_li">Implemento 3 - $300 <button class="remove-from-cart">Eliminar</button></li>
 			</ul>
 			<p class="total">Total: $600</p>
 			<button class="checkout">Pagar</button>
 		</aside>
+
 	</main>
 	
 	<footer>
