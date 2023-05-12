@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Interfaz de registro de usuario</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<h1>Registro de Usuario</h1>
-		<form class="form">
-			<label for="nombre"  class="email">Nombre:</label>
-			<input type="text" id="nombre" name="nombre" required class="caja">
-			<label for="email" class="email">Email:</label>
-			<input type="email" id="email" name="email" required class="caja">
-			<label for="password" class="password">Contraseña:</label>
-			<input type="password" id="password" name="password" required>
-			<label for="confirm-password" class="password" >Confirmar Contraseña:</label>
-			<input type="password" id="confirm-password" name="confirm-password" required class="caja">
-			<input type="submit" value="Registrarse" class="email">
-		</form>
-        <a href="login.html" class="pag_2">Ya tienes cuenta?, logeate</a>
-	</div>
-</body>
-</html>
+  <head>
+    <title>Registro de cliente - Tienda de electrónicos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
 
+      h1 {
+        text-align: center;
+        padding-top: 20px;
+        color: #444;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="submit"] {
+        background-color: #0080ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registro de cliente</h1>
+    <form action="login.html" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena">
+      <label for="contrasena">Repetir Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion">
+      <input type="submit" value="Registrarse">
+    </form>
+  </body>
+</html>
