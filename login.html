@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Interfaz de inicio de sesión de usuario</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<div class="title">
-			<h1>Iniciar sesión</h1>
-		</div>
+  <head>
+    <title>Iniciar sesión - Tienda de electrónicos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
 
-		<form class="form" >
-			<label for="email" class="email">Email:</label>
-			<input type="email" id="email" name="email" required class="caja">
-			<label for="password" class="password">Contraseña:</label>
-			<input type="password" id="password" name="password" required class="caja">
-			<input type="submit" value="Iniciar sesión" class="boton">
-		</form>
-	 <a href="register.html" class="pag_2">No tienes cuenta?, registrate</a>
-	</div>
-</body>
+      h1 {
+        text-align: center;
+        padding-top: 20px;
+        color: #444;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="submit"] {
+        background-color: #0080ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0066cc;
+      }
+
+      .registrarse {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .registrarse a {
+        color: #0080ff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciar sesión</h1>
+    <form action="index.html" method="post">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena">
+
+      <input type="submit" value="Iniciar sesión">
+
+      <div class="registrarse">
+        ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
+      </div>
+    </form>
+  </body>
 </html>
