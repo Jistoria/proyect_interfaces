@@ -1,0 +1,6 @@
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion">

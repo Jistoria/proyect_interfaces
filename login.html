@@ -8,13 +8,18 @@
     </style>
   </head>
   <body>
-    <h1>Iniciar sesión</h1>
-    <form action="index.html" method="post">
+    <div id="app">
+      <h1>{{prueba}}</h1>
+      <h1>Iniciar sesión</h1>
+      <ul>
+        <li>{{ error }}</li>
+      </ul>
+    <form @submit.prevent="login" action="index.html" method="post">
       <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email">
+      <input type="email" v-model="email">
 
       <label for="contrasena">Contraseña:</label>
-      <input type="password" id="contrasena" name="contrasena">
+      <input type="password" v-model="contraseña">
 
       <input type="submit" value="Iniciar sesión">
 
@@ -22,6 +27,44 @@
         ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
       </div>
     </form>
+    </div>
+    
+
+
+    <!-- codigo script de vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const usuarioString = localStorage.getItem('usuario');
+        const usuario = JSON.parse(usuarioString);
+        console.log(usuario); // Imprime el objeto usuario en la consola
+
+     const { createApp } = Vue
+
+      createApp({
+        data() {
+          return {
+            error: '',
+            prueba: 'Hello Vue!',
+            contraseña:'',
+            email:'',
+            usuario: JSON.parse(localStorage.getItem('usuario')) || {},
+
+         }
+       },
+       methods:{
+        login: function(e) {
+    if (this.email !== this.usuario.email || this.contraseña !== this.usuario.contraseña) {
+      this.error = 'Datos inválidos';
+      e.preventDefault();
+    }else{
+      localStorage.setItem('usuario', JSON.stringify(usuario));
+      window.location.href = 'index.html';
+    }
+    
+  }
+       }
+      }).mount('#app')
+    </script>
   </body>
 </html>
 

@@ -9,10 +9,13 @@
 
   <body>
     <h1>Tienda de electrónicos</h1>
+    <div id="app">{{prueba}} - {{usuario.nombre}}
+
+    </div>
     <div class="container">
       <div class="productos">
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt
+          <img src="https://via.placeholder.com/200x200" alt>
           <h2>Producto 1</h2>
           <p>$100</p>
           <button onclick="agregarAlCarrito('Producto 1', 100)">Agregar al carrito</button>
@@ -73,7 +76,7 @@
         </div>
       </div>
       <div class="carrito">
-        <h2>Carrito de compras</
+        <h2>Carrito de compras</h
             <div class="carrito">
                 <h2>Carrito de compras</h2>
                 <ul id="lista-carrito">
@@ -85,3 +88,23 @@
             </div>
             
             <script src="codigo.js"></script>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script>
+              const usuarioString = localStorage.getItem('usuario');
+        const usuario = JSON.parse(usuarioString);
+        console.log(usuario); // Imprime el objeto usuario en la consola
+
+
+        const { createApp } = Vue
+
+      createApp({
+        data() {
+          return {
+            prueba: 'Bienvenido!',
+            usuario: JSON.parse(localStorage.getItem('usuario')) || {},
+
+         }
+       },
+     
+      }).mount('#app')
+            </script>
