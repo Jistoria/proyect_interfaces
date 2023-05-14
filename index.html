@@ -21,16 +21,16 @@
           <button onclick="agregarAlCarrito('Producto 1', 100)">Agregar al carrito</button>
         </div>
         <div class="producto">
-          <img src="https://scontent.fmec4-1.fna.fbcdn.net/v/t39.30808-6/346476271_811271156559811_6432778142150403987_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=b4h6ndKzJ_QAX_USu4Z&_nc_ht=scontent.fmec4-1.fna&oh=00_AfBlPPZMo8XIE5MIjRjDB_Lmv4LgYbX94HVeZn-AiDf7rA&oe=6464B824" alt="Producto 2">
+          <img src="https://via.placeholder.com/200x200" alt="Producto 2">
           <h2>Producto 2</h2>
           <p>$200</p>
           <button onclick="agregarAlCarrito('Producto 2', 200)">Agregar al carrito</button>
         </div>
         <div class="producto">
-          <img src="https://scontent.fmec4-1.fna.fbcdn.net/v/t39.30808-6/346073802_616222150390405_3138495233075726595_n.jpg?stp=dst-jpg_p526x296&_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ZmAmwdvNA8UAX_7Z5bL&_nc_ht=scontent.fmec4-1.fna&oh=00_AfBqF80PEZ7qNTS9muuzVZX9ZiQGt_2_LNstg_UsUNU0Lw&oe=6464CEAD" alt="Producto 3">
-          <h2>Hielo para el solazo</h2>
+          <img src="https://via.placeholder.com/200x200" alt="Producto 3">
+          <h2>Producto 2</h2>
           <p>$300</p>
-          <button onclick="agregarAlCarrito('Producto 3', 300)">Agregar al carrito</button>
+          <button onclick="agregarAlCarrito('Hielo para el solazo', 300)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 4">
@@ -86,25 +86,25 @@
                 <button onclick="vaciarCarrito()">Vaciar carrito</button>
               </div>
             </div>
-            
+              
             <script src="codigo.js"></script>
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script>
               const usuarioString = localStorage.getItem('usuario');
-        const usuario = JSON.parse(usuarioString);
-        console.log(usuario); // Imprime el objeto usuario en la consola
+              const usuario = JSON.parse(usuarioString);
+              console.log(usuario); // Imprime el objeto usuario en la consola
 
 
-        const { createApp } = Vue
+              const { createApp } = Vue
 
-      createApp({
-        data() {
-          return {
-            prueba: 'Bienvenido!',
-            usuario: JSON.parse(localStorage.getItem('usuario')) || {},
+              createApp({
+              data() {
+                return {
+                  prueba: 'Bienvenido!',
+                  usuario: JSON.parse(localStorage.getItem('usuario')) || {},
 
-         }
-       },
+                }
+              },
      
-      }).mount('#app')
+              }).mount('#app')
             </script>
