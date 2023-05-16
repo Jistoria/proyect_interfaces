@@ -4,3 +4,13 @@
 
       <label for="direccion">Dirección:</label>
       <input type="text" id="direccion" name="direccion">
+
+        if(this.email==this.emailadmin){
+      const admin = {
+                nombre: 'Soy el admin',
+                apellido: 'Guapo',
+                email: this.email,
+              };
+              localStorage.setItem('admin', JSON.stringify(admin));
+              window.location.href = 'admin.html';
+    }
