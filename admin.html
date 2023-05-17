@@ -128,61 +128,64 @@
           <img src="https://via.placeholder.com/200x200" alt
           <h2>Producto 1</h2>
           <p>$100</p>
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
           
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 2">
           <h2>Producto 2</h2>
           <p>$200</p>
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
           
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 3">
           <h2>Producto 3</h2>
           <p>$300</p>
-          
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 4">
           <h2>Producto 4</h2>
           <p>$400</p>
-          
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 5">
           <h2>Producto 5</h2>
           <p>$500</p>
-        
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 6">
           <h2>Producto 6</h2>
           <p>$600</p>
-          
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
+
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 7">
           <h2>Producto 7</h2>
           <p>$700</p>
-          
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 8">
           <h2>Producto 8</h2>
           <p>$800</p>
-         
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 9">
           <h2>Producto 9</h2>
           <p>$900</p>
-         
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 10">
           <h2>Producto 10</h2>
           <p>$1000</p>
-          
+          <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
       </div>
       <div class="agregar-producto">
@@ -195,69 +198,34 @@
           <button type="submit">Agregar</button>
         </form>
       </div>
-    
-            
-            <script>
-              const listaCarrito = document.querySelector("#lista-carrito");
-              const totalCarrito = document.querySelector("#total-carrito");
-              const formAgregarProducto = document.querySelector('.agregar-producto form');
-
-                formAgregarProducto.addEventListener('submit', function(event) {
-                event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
-                const nombre = document.getElementById('nombre').value;
-                const precio = parseFloat(document.getElementById('precio').value);
-                agregarProducto(nombre, precio);
-                formAgregarProducto.reset(); // Limpiar el formulario
-                });
-
-              let carrito = [];
-            
-              
-              function agregarProducto(nombre, precio) {
-  const productos = document.querySelector('.productos');
-  const nuevoProducto = `
-    <div class="producto">
-      <img src="https://via.placeholder.com/200x200" alt="${nombre}">
-      <h2>${nombre}</h2>
-      <p>$${precio}</p>
-      
     </div>
-  `;
-  productos.insertAdjacentHTML('beforeend', nuevoProducto);
-}
+  </body>
+</html>           
+<script>
+ 
+  const formAgregarProducto = document.querySelector('.agregar-producto form');
+    formAgregarProducto.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+    const nombre = document.getElementById('nombre').value;
+    const precio = parseFloat(document.getElementById('precio').value);
+    agregarProducto(nombre, precio);
+    formAgregarProducto.reset(); // Limpiar el formulario
+    });
+  function agregarProducto(nombre, precio) {
+    const productos = document.querySelector('.productos');
+    const nuevoProducto = `
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x200" alt="${nombre}">
+        <h2>${nombre}</h2>
+        <p>$${precio}</p>
+        <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
+      </div>
+    `;
+    productos.insertAdjacentHTML('beforeend', nuevoProducto);
+  }
 
-            
-              function mostrarCarrito() {
-                listaCarrito.innerHTML = "";
-                carrito.forEach((producto) => {
-                  const { nombre, precio } = producto;
-                  const itemCarrito = document.createElement("li");
-                  itemCarrito.innerHTML = `
-                    ${nombre} - $${precio}
-                    <button onclick='eliminarDelCarrito("${nombre}")'>Eliminar</button>
-                  `;
-                  listaCarrito.appendChild(itemCarrito);
-                });
-                calcularTotal();
-              }
-            
-              function calcularTotal() {
-                let total = 0;
-                carrito.forEach((producto) => {
-                  total += producto.precio;
-                });
-                totalCarrito.textContent = total;
-              }
-            
-              function eliminarDelCarrito(nombre) {
-                carrito = carrito.filter((producto) => producto.nombre !== nombre);
-                mostrarCarrito();
-              }
-            
-              function vaciarCarrito() {
-                carrito = [];
-                mostrarCarrito();
-              }
-              
-            </script>
-            
+  function eliminarProducto(boton) {
+    const producto = boton.parentNode;
+    producto.remove();
+  }
+</script>
