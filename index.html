@@ -91,33 +91,6 @@
   </body>
 </html>
     
-              
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>             
 <script src="codigo.js"></script>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script>
-  const usuarioString = localStorage.getItem('usuario');
-  const usuario = JSON.parse(usuarioString);
-  console.log(usuario); // Imprime el objeto usuario en la consola
 
-
-  const { createApp } = Vue
-
-  createApp({
-    data() {
-      return {
-        prueba: 'Bienvenido!',
-          usuario: JSON.parse(localStorage.getItem('usuario')) || {},
-
-      }
-    },
-  }).mount('#app')
-  function realizarCompra() {
-  // Aquí puedes agregar la lógica para procesar la compra, como enviar una solicitud al servidor, guardar la información en una base de datos, etc.
-  
-  // Por ahora, simplemente mostraremos un mensaje de confirmación
-  alert("¡Gracias por tu compra!");
-  
-  // También puedes restablecer el carrito o redirigir al usuario a una página de confirmación de compra, dependiendo de tus necesidades.
-}
-
-</script>
