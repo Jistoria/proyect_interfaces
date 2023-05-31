@@ -15,24 +15,27 @@
         </ul>
       </p>
      <form  @submit.prevent="checkForm"   method="post" action="login.html">
-      <label for="nombre">Nombre:</label>
+      <label for="nombre">Nombre*:</label>
       <input type="text" v-model="nombre" >
 
-      <label for="apellido">Apellido:</label>
+      <label for="apellido">Apellido*:</label>
       <input type="text" v-model="apellido">
 
-      <label for="email">Email:</label>
+      <label for="email">Email*:</label>
       <input type="email" v-model="email">
 
-      <label for="telefono">Teléfono:</label>
+      <label for="telefono">Teléfono*:</label>
       <input type="tel" v-model="telefono">
 
-      <label for="direccion">Dirección:</label>
+      <label for="telefono2">Teléfono 2:</label>
+      <input type="tel" v-model="telefono2">
+
+      <label for="direccion">Dirección*:</label>
       <input type="text" v-model="direccion">
 
-      <label for="contrasena">Contraseña:</label>
+      <label for="contrasena">Contraseña*:</label>
       <input type="password" v-model="contraseña">
-      <label for="contrasena">Repetir Contraseña:</label>
+      <label for="contrasena">Repetir Contraseña*:</label>
       <input type="password" v-model="r_contraseña">
 
       <input type="submit" value="Registrarse">

@@ -34,9 +34,13 @@ function calcularTotal() {
 }
 
 function eliminarDelCarrito(nombre) {
-  carrito = carrito.filter((producto) => producto.nombre !== nombre);
-  mostrarCarrito();
+  const index = carrito.findIndex((producto) => producto.nombre === nombre);
+  if (index !== -1) {
+    carrito.splice(index, 1);
+    mostrarCarrito();
+  }
 }
+
 
 function vaciarCarrito() {
   carrito = [];
