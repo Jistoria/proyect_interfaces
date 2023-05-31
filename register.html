@@ -9,9 +9,10 @@
     <div id="app">
       <h1>Registro de cliente</h1>
       <p v-if="errors.length">
-        <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
-        <ul>
-          <li v-for="error in errors">{{ error }}</li>
+        <ul class="base" id="modal" style="display: none;" class="modal">
+          <b v-if="errors.length" class="titu_e">Por favor, corrija el(los) siguiente(s) error(es):</b>
+          <li v-for="error in errors" class="errores">{{ error }}</li>
+          <button onclick="closeModal()" class="button1">Cerrar</button>
         </ul>
       </p>
      <form  @submit.prevent="checkForm"   method="post" action="login.html">
@@ -38,7 +39,7 @@
       <label for="contrasena">Repetir Contraseña*:</label>
       <input type="password" v-model="r_contraseña">
 
-      <input type="submit" value="Registrarse">
+       <input type="submit" onclick="openModal()" value="Registrarse">
     </form>
     </div>
     <!-- aqui termina vue -->
@@ -49,6 +50,7 @@
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="codigo.js"></script>
+  <script src="modal.js"></script>
   <script>
     const { createApp } = Vue
     
