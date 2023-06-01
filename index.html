@@ -10,9 +10,14 @@
   <body>
     <h1>Tienda de electrónicos</h1>
     <div id="app">{{prueba}} - {{usuario.nombre}}
-
     </div>
+    
     <div class="container">
+      <label for="busqueda">Buscar producto:</label>
+      <div class="search-bar">
+        <input type="text" id="busqueda" oninput="filtrarProductos()" placeholder="Ingresa tu búsqueda">
+        <!-- <button type="submit" onclick="filtrarProductos()"><i class="fa fa-search"></i></button> -->
+      </div>
       <div class="productos">
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt>

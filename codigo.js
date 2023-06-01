@@ -1,6 +1,21 @@
 const listaCarrito = document.querySelector("#lista-carrito");
 const totalCarrito = document.querySelector("#total-carrito");
 let carrito = [];
+function filtrarProductos() {
+  const busqueda = document.getElementById('busqueda').value.toLowerCase();
+  const productos = document.getElementsByClassName('producto');
+
+  for (const producto of productos) {
+    const nombre = producto.querySelector('h2').innerText.toLowerCase();
+
+    if (nombre.includes(busqueda)) {
+      producto.style.display = 'block';
+    } else {
+      producto.style.display = 'none';
+    }
+  }
+}
+
 
 function agregarAlCarrito(nombre, precio) {
   const producto = {
