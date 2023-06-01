@@ -285,5 +285,18 @@ label {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
+/* Filtro de precio */
+label[for="filtroPrecio"] {
+  margin-top: 10px;
+  display: block;
+}
 
+#filtroPrecio {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.espacio {
+  height: 20px;
+}
 

@@ -3,18 +3,34 @@ const totalCarrito = document.querySelector("#total-carrito");
 let carrito = [];
 function filtrarProductos() {
   const busqueda = document.getElementById('busqueda').value.toLowerCase();
+  const filtroPrecio = document.getElementById('filtroPrecio').value;
   const productos = document.getElementsByClassName('producto');
 
   for (const producto of productos) {
     const nombre = producto.querySelector('h2').innerText.toLowerCase();
+    const precio = parseInt(producto.querySelector('p').innerText.slice(1));
 
-    if (nombre.includes(busqueda)) {
+    const cumpleBusqueda = nombre.includes(busqueda);
+
+    let cumplePrecio = false;
+    if (filtroPrecio === 'todos') {
+      cumplePrecio = true;
+    } else if (filtroPrecio === 'menor200') {
+      cumplePrecio = precio < 200;
+    } else if (filtroPrecio === 'menor500') {
+      cumplePrecio = precio < 500;
+    } else if (filtroPrecio === 'mayor500') {
+      cumplePrecio = precio > 500;
+    }
+
+    if (cumpleBusqueda && cumplePrecio) {
       producto.style.display = 'block';
     } else {
       producto.style.display = 'none';
     }
   }
 }
+
 
 
 function agregarAlCarrito(nombre, precio) {

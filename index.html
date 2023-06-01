@@ -16,8 +16,15 @@
       <label for="busqueda">Buscar producto:</label>
       <div class="search-bar">
         <input type="text" id="busqueda" oninput="filtrarProductos()" placeholder="Ingresa tu búsqueda">
-        <!-- <button type="submit" onclick="filtrarProductos()"><i class="fa fa-search"></i></button> -->
       </div>
+      <label for="filtroPrecio">Filtro de precio:</label>
+      <select id="filtroPrecio" onchange="filtrarProductos()">
+          <option value="todos">Todos</option>
+          <option value="menor200">Menor de 200</option>
+          <option value="menor500">Menor a 500</option>
+          <option value="mayor500">Mayor a 500</option>
+        </select>
+      <div class="espacio"></div>
       <div class="productos">
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt>
@@ -33,7 +40,7 @@
         </div>
         <div class="producto">
           <img src="https://via.placeholder.com/200x200" alt="Producto 3">
-          <h2>Producto 2</h2>
+          <h2>Producto 3</h2>
           <p>$300</p>
           <button onclick="agregarAlCarrito('Producto 3', 300)">Agregar al carrito</button>
         </div>
