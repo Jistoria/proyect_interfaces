@@ -20,6 +20,6 @@ productos.insertAdjacentHTML('beforeend', nuevoProducto);
 }
 
 function eliminarProducto(boton) {
-const producto = boton.parentNode;
-producto.remove();
+  const producto = boton.parentNode;
+  producto.remove();
 }
