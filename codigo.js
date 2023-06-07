@@ -154,14 +154,4 @@ e.preventDefault();
 function realizarCompra() {
 alert("¡Gracias por tu compra!");
 }
-//modo oscuro
-const btnModoOscuro = document.getElementById("btn-modo-oscuro");
-const productos = document.getElementById("productos");
-
-btnModoOscuro.addEventListener("click", toggleModoOscuro);
-
-function toggleModoOscuro() {
-  productos.classList.toggle("modo-oscuro");
-}
-
 
