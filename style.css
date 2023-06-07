@@ -16,7 +16,7 @@ body {
 	margin: 0 auto;
 	padding: 20px;
   }
-
+ /* Estilos para la productos */
   .productos {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -63,6 +63,12 @@ body {
 
   .producto button:hover {
 	background-color: #0066cc;
+  }
+  /* Estilos para la descripción */
+  .producto .descripcion {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
   }
 
   .carrito {
