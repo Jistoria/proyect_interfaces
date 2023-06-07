@@ -150,12 +150,18 @@ e.preventDefault();
 
   }
 }).mount('#app')
+
 function realizarCompra() {
-// Aquí puedes agregar la lógica para procesar la compra, como enviar una solicitud al servidor, guardar la información en una base de datos, etc.
-
-// Por ahora, simplemente mostraremos un mensaje de confirmación
 alert("¡Gracias por tu compra!");
-
-// También puedes restablecer el carrito o redirigir al usuario a una página de confirmación de compra, dependiendo de tus necesidades.
 }
+//modo oscuro
+const btnModoOscuro = document.getElementById("btn-modo-oscuro");
+const productos = document.getElementById("productos");
+
+btnModoOscuro.addEventListener("click", toggleModoOscuro);
+
+function toggleModoOscuro() {
+  productos.classList.toggle("modo-oscuro");
+}
+
 

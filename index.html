@@ -9,9 +9,7 @@
 
   <body>
     <h1>Tienda de electrónicos</h1>
-    <div id="app">{{prueba}} - {{usuario.nombre}}
-    </div>
-    
+    <div id="app">{{prueba}} - {{usuario.nombre}}</div>
     <div class="container">
       <label for="busqueda">Buscar producto:</label>
       <div class="search-bar">
@@ -19,11 +17,11 @@
       </div>
       <label for="filtroPrecio">Filtro de precio:</label>
       <select id="filtroPrecio" onchange="filtrarProductos()">
-          <option value="todos">Todos</option>
-          <option value="menor200">Menor de 200</option>
-          <option value="menor500">Menor a 500</option>
-          <option value="mayor500">Mayor a 500</option>
-        </select>
+        <option value="todos">Todos</option>
+        <option value="menor200">Menor de 200</option>
+        <option value="menor500">Menor a 500</option>
+        <option value="mayor500">Mayor a 500</option>
+      </select>
       <div class="espacio"></div>
       <div class="productos">
         <div class="producto">
@@ -89,15 +87,56 @@
       </div>
       <div class="carrito">
         <h2>Carrito de compras</h2>
-            <div class="carrito">
-                <h2>Carrito de compras</h2>
-                <ul id="lista-carrito">
-                  <!-- Aquí se mostrarán los productos agregados al carrito -->
-                </ul>
-                <p>Total: $<span id="total-carrito">0</span></p>
-                <button onclick="vaciarCarrito()">Vaciar carrito</button>
-                <button onclick="realizarCompra()">Realizar compra</button>
-            </div>
+        <div class="carrito">
+          <ul id="lista-carrito">
+            <!-- Aquí se mostrarán los productos agregados al carrito -->
+          </ul>
+          <p>Total: $<span id="total-carrito">0</span></p>
+          <button onclick="vaciarCarrito()">Vaciar carrito</button>
+          <button onclick="realizarCompra()">Realizar compra</button>
+        </div>
+      </div>    
+      <div class="espacio"></div>
+
+
+      <div class="center">
+        <h2>Productos Futuros</h2>
+      </div>
+    
+      <div class="productos-futuros">
+        
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
+        <div class="producto-futuro">
+          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
+          <h3>Nombre del producto futuro</h3>
+        </div>
       </div>
     </div>
   </body>
