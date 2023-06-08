@@ -149,6 +149,11 @@ nav ul li.selected a {
   font-size: 16px;
   margin-bottom: 5px;
 }
+
+.logo img{
+  width: 510px;
+  height: 200px;
+}
 .fd{
   background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg');
   /*   background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg'); */
