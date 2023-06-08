@@ -1,15 +1,14 @@
 const { createApp } = Vue
-    
 
 createApp({
     data() {
       return {
         errors: [],
-        prueba: 'Hello Vue!',
         nombre: '',
         apellido:'',
         email:'',
         telefono:'',
+        telefono2:'',
         direccion:'',
         contraseña:'',
         r_contraseña:''
