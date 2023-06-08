@@ -346,10 +346,7 @@ label[for="filtroPrecio"] {
   margin-bottom: 10px;
   color: #555555;
 }
-.fd{
-  background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg');
-  /*   background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg'); */
-  background-size: 2000px 2500px;
-  background-position-y: 40%;
-  background-repeat: no-repeat;
+.wlc{
+  color: #0c529c;
+  font-size: 50px;
 }
