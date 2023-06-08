@@ -3,7 +3,6 @@
   <head>
     <title>Tienda de electrónicos</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
   <meta charset="UTF-8">
   </head>
 
@@ -17,6 +16,7 @@
     <div class="container">
       <label for="busqueda">Buscar producto:</label>
       <div class="search-bar">
+    
         <input type="text" id="busqueda" oninput="filtrarProductos()" placeholder="Ingresa tu búsqueda">
       </div>
       <label for="filtroPrecio">Filtro de precio:</label>
@@ -30,72 +30,72 @@
       <div class="productos">
         <div class="producto">
           <img src="img/alfombra spider.jpg" alt="Producto 2" style="width: 200px; height: 200px;">
-          <h2>Producto 1</h2>
+          <h2>Alfombra ValoTech Classic </h2>
           <p>$100</p>
-          <p class="descripcion">Descripción del producto 1.</p>
+          <p class="descripcion">Alfrombra clasica para mouse.</p>
           <button onclick="agregarAlCarrito('Producto 2', 200)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/alfombra.jpg" alt="Producto 2" style="width: 200px; height: 200px;">
-          <h2>Producto 2</h2>
+          <h2>Alfombra ValoTech RGB</h2>
           <p>$200</p>
-          <p class="descripcion">Descripción del producto 2.</p>
+          <p class="descripcion">Alfombra RetroIluminado RGB.</p>
           <button onclick="agregarAlCarrito('Producto 2', 200)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/mando 2.jpg" alt="Producto 3" style="width: 200px; height: 200px;">
-          <h2>Producto 3</h2>
+          <h2>Xbox Core Wireless Controller</h2>
           <p>$300</p>
-          <p class="descripcion">Descripción del producto 3.</p>
+          <p class="descripcion">Mando de Xbox.</p>
           <button onclick="agregarAlCarrito('Producto 3', 300)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/mando.jpg" alt="Producto 4" style="width: 200px; height: 200px;">
-          <h2>Producto 4</h2>
+          <h2>Playstation DualSense Controller</h2>
           <p>$400</p>
-          <p class="descripcion">Descripción del producto 4.</p>
+          <p class="descripcion">Mando de PS5.</p>
           <button onclick="agregarAlCarrito('Producto 4', 400)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/mouse logitech.jpg" alt="Producto 5" style="width: 200px; height: 200px;">
-          <h2>Producto 5</h2>
+          <h2>Mouse Inalambrico LogiTech</h2>
           <p>$500</p>
-          <p class="descripcion">Descripción del producto 5.</p>
+          <p class="descripcion">Mouse Programable.</p>
           <button onclick="agregarAlCarrito('Producto 5', 500)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/mouse transformer.jpg" alt="Producto 6" style="width: 200px; height: 200px;">
-          <h2>Producto 6</h2>
+          <h2>Mouse ValoTech</h2>
           <p>$600</p>
-          <p class="descripcion">Descripción del producto 6.</p>
+          <p class="descripcion">Mouse Programable.</p>
           <button onclick="agregarAlCarrito('Producto 6', 600)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/teclado 2.jpg" alt="Producto 7" style="width: 200px; height: 200px;">
-          <h2>Producto 7</h2>
+          <h2>Teclado ValoTech</h2>
           <p>$700</p>
-          <p class="descripcion">Descripción del producto 7.</p>
+          <p class="descripcion">Teclado RetroIluminado RGB.</p>
           <button onclick="agregarAlCarrito('Producto 7', 700)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/teclado hp.jpg" alt="Producto 8" style="width: 200px; height: 200px;">
-          <h2>Producto 8</h2>
+          <h2>Teclado HP</h2>
           <p>$800</p>
-          <p class="descripcion">Descripción del producto 8.</p>
+          <p class="descripcion">Teclado RetroIluminado RGB.</p>
           <button onclick="agregarAlCarrito('Producto 8', 800)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/ventilador 2.jpg" alt="Producto 9" style="width: 200px; height: 200px;">
-          <h2>Producto 9</h2>
+          <h2>Cooler RadioShark</h2>
           <p>$900</p>
-          <p class="descripcion">Descripción del producto 9.</p>
+          <p class="descripcion">Cooler RetroIluminado Rojo.</p>
           <button onclick="agregarAlCarrito('Producto 9', 900)">Agregar al carrito</button>
         </div>
         <div class="producto">
           <img src="img/ventilador.jpg" alt="Producto 10" style="width: 200px; height: 200px;">
-          <h2>Producto 10</h2>
+          <h2>Cooler ValoTech</h2>
           <p>$1000</p>
-          <p class="descripcion">Descripción del producto 10.</p>
+          <p class="descripcion">Cooler RetroIluminado RGB.</p>
           <button onclick="agregarAlCarrito('Producto 10', 1000)">Agregar al carrito</button>
         </div>
       </div>
@@ -120,43 +120,29 @@
       <div class="productos-futuros">
         
         <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
+          <img src="img/rtx.jpg" alt="Nombre del producto futuro" style="width: 250px; height: 280px;">
+          <h3>Geforce RTX 4090</h3>
         </div>
         <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
+          <img src="img/audifono 1.jpg" alt="Nombre del producto futuro" style="width: 250px; height: 280px;">
+          <h3>Audifonos ValoTech</h3>
         </div>
         <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
+          <img src="img/case powerranger.jpg" alt="Nombre del producto futuro" style="width: 250px; height: 280px;">
+          <h3>Case PowerRanger ValoTech</h3>
         </div>
         <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
+          <img src="img/monitor.jpg" alt="Nombre del producto futuro" style="width: 250px; height: 280px;">
+          <h3>Monitor 144hz ROG</h3>
         </div>
         <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
-        </div>
-        <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
-        </div>
-        <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
-        </div>
-        <div class="producto-futuro">
-          <img src="ruta-de-la-imagen" alt="Nombre del producto futuro">
-          <h3>Nombre del producto futuro</h3>
+          <img src="img/silla.jpg" alt="Nombre del producto futuro">
+          <h3>Silla Gamer MICRO</h3>
         </div>
       </div>
     </div>
-    
   </body>
 </html>
     
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>             
 <script src="codigo.js"></script>
-

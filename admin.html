@@ -69,53 +69,100 @@
       .producto button:hover {
         background-color: #0066cc;
       }
+      /* Agregar producto */
+      .agregar-producto {
+    text-align: center;
+    margin-top: 20px;
+  }
 
-      .carrito {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
+  .agregar-producto h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
-      .carrito h2 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 18px;
-        color: #333;
-      }
+  .agregar-producto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .carrito ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
+  .agregar-producto label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #666;
+  }
 
-      .carrito li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-        color: #555;
-      }
+  .agregar-producto input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 
-      .carrito li span {
-        font-weight: bold;
-        margin-right: 10px;
-      }
+  .agregar-producto button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
 
-      .carrito button {
-        background-color: #0080ff;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
+  .agregar-producto button:hover {
+    background-color: #45a049;
+  }
 
-      .carrito button:hover {
-        background-color: #0066cc;
-      }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .producto {
+    text-align: center;
+    width: 200px;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .producto h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .producto p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .producto button {
+    padding: 6px 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .producto button:hover {
+    background-color: #d32f2f;
+  }
     </style> 
   <meta charset="UTF-8">
   </head>
@@ -125,66 +172,75 @@
     <div class="container">
       <div class="productos">
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt>
-          <h2>Producto 1</h2>
+          <img src="img/alfombra spider.jpg" alt="Producto 2" style="width: 200px; height: 200px;">
+          <h2>Alfombra ValoTech Classic </h2>
           <p>$100</p>
+          <p class="descripcion">Alfrombra clasica para mouse.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
-          
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 2">
-          <h2>Producto 2</h2>
+          <img src="img/alfombra.jpg" alt="Producto 2" style="width: 200px; height: 200px;">
+          <h2>Alfombra ValoTech RGB</h2>
           <p>$200</p>
+          <p class="descripcion">Alfombra RetroIluminado RGB.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
           
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 3">
-          <h2>Producto 3</h2>
+          <img src="img/mando 2.jpg" alt="Producto 3" style="width: 200px; height: 200px;">
+          <h2>Xbox Core Wireless Controller</h2>
           <p>$300</p>
+          <p class="descripcion">Mando de Xbox.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 4">
-          <h2>Producto 4</h2>
+          <img src="img/mando.jpg" alt="Producto 4" style="width: 200px; height: 200px;">
+          <h2>Playstation DualSense Controller</h2>
           <p>$400</p>
+          <p class="descripcion">Mando de PS5.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 5">
-          <h2>Producto 5</h2>
+          <img src="img/mouse logitech.jpg" alt="Producto 5" style="width: 200px; height: 200px;">
+          <h2>Mouse Inalambrico LogiTech</h2>
           <p>$500</p>
+          <p class="descripcion">Mouse Programable.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 6">
-          <h2>Producto 6</h2>
+          <img src="img/mouse transformer.jpg" alt="Producto 6" style="width: 200px; height: 200px;">
+          <h2>Mouse ValoTech</h2>
           <p>$600</p>
+          <p class="descripcion">Mouse Programable.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
 
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 7">
-          <h2>Producto 7</h2>
+          <img src="img/teclado 2.jpg" alt="Producto 7" style="width: 200px; height: 200px;">
+          <h2>Teclado ValoTech</h2>
           <p>$700</p>
+          <p class="descripcion">Teclado RetroIluminado RGB.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 8">
-          <h2>Producto 8</h2>
+          <img src="img/teclado hp.jpg" alt="Producto 8" style="width: 200px; height: 200px;">
+          <h2>Teclado HP</h2>
           <p>$800</p>
+          <p class="descripcion">Teclado RetroIluminado RGB.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 9">
-          <h2>Producto 9</h2>
+          <img src="img/ventilador 2.jpg" alt="Producto 9" style="width: 200px; height: 200px;">
+          <h2>Cooler RadioShark</h2>
           <p>$900</p>
+          <p class="descripcion">Cooler RetroIluminado Rojo.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
         <div class="producto">
-          <img src="https://via.placeholder.com/200x200" alt="Producto 10">
-          <h2>Producto 10</h2>
+          <img src="img/ventilador.jpg" alt="Producto 10" style="width: 200px; height: 200px;">
+          <h2>Cooler ValoTech</h2>
           <p>$1000</p>
+          <p class="descripcion">Cooler RetroIluminado RGB.</p>
           <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
         </div>
       </div>
@@ -195,9 +251,14 @@
           <input type="text" id="nombre" name="nombre" required>
           <label for="precio">Precio:</label>
           <input type="number" id="precio" name="precio" required>
+          <br>
+          <label for="imagen">Imagen:</label>
+          <input type="text" id="imagen" name="imagen">
+          <br>
           <button type="submit">Agregar</button>
         </form>
       </div>
+      
     </div>
   </body>
 </html> 
