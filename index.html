@@ -17,7 +17,7 @@
             <img src="img/logo.png"  style="width: 600px; height: 200px;" alt="Logo">
           </div>
         </div>
-        <div id="app2" class="col-md-6">
+        <div id="app" class="col-md-6">
           <div v-if="!usuario">
             <nav class="text-md-right">
               <ul class="nav">
@@ -32,6 +32,7 @@
               <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="welcome.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" @click="logout">Cerrar Sesion</a></li>
+                <h4>  ¡Bienvenido {{usuario?.nombre}}!</h4>
               </ul>
             </nav>
           </div>
@@ -41,9 +42,7 @@
   </header>
   <!-- body -->
   <body>
-    <div class="center">
-      <div id="app">¡Bienvenido {{usuario?.nombre}}!</div>
-    </div>
+  
     
     
     <div class="container">
@@ -132,8 +131,8 @@
           <button onclick="agregarAlCarrito('Producto 10', 1000)">Agregar al carrito</button>
         </div>
       </div>
-      <div id="app3">
-        <div v-if="usuario"class="carrito">
+     
+        <div class="carrito">
           <h2>Carrito de compras</h2>
           <div class="carrito">
             <ul id="lista-carrito">
@@ -144,10 +143,7 @@
             <button onclick="realizarCompra()">Realizar compra</button>
           </div>
         </div> 
-        <div v-else>
-          <h2>Para acceder al carrito y las demas funciones de compra porfavor inicia sesión</h2>
-        </div> 
-      </div>
+        
       
         
       <div class="espacio"></div>
@@ -209,10 +205,3 @@
   <script src="codigo.js"></script>
 </html>
     
-<<<<<<< HEAD
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>             
-<script src="codigo.js"></script>
-=======
-
-
->>>>>>> e78b5dc8e34ec4f41747a37a5373e4cde107bc1d

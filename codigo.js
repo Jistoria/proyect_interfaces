@@ -1,5 +1,8 @@
 const listaCarrito = document.querySelector("#lista-carrito");
 const totalCarrito = document.querySelector("#total-carrito");
+const usuarioString = localStorage.getItem('usuario');
+const usuario = JSON.parse(usuarioString);
+console.log(usuario); // Imprime el objeto usuario en la consola
 let carrito = [];
 function filtrarProductos() {
   const busqueda = document.getElementById('busqueda').value.toLowerCase();
@@ -33,14 +36,21 @@ function filtrarProductos() {
 
 
 
-function agregarAlCarrito(nombre, precio) {
-  const producto = {
-    nombre,
-    precio,
-  };
-  carrito.push(producto);
-  mostrarCarrito();
+  function agregarAlCarrito(nombre, precio) {
+    if(!usuario){
+      alert("Para usar el carrito debes iniciar sesion");
+  }else{
+    const producto = {
+      nombre,
+      precio,
+    };
+    carrito.push(producto);
+    mostrarCarrito();
+  }
+  
 }
+
+
 
 function mostrarCarrito() {
   listaCarrito.innerHTML = "";
@@ -77,9 +87,7 @@ function vaciarCarrito() {
   carrito = [];
   mostrarCarrito();
 }
-const usuarioString = localStorage.getItem('usuario');
-const usuario = JSON.parse(usuarioString);
-console.log(usuario); // Imprime el objeto usuario en la consola
+
 
 
 const { createApp } = Vue
@@ -91,37 +99,18 @@ createApp({
     }
   },
   methods:{
-    
-
-},
-}).mount('#app')
-
-createApp({
-  data() {
-    return {
-      usuario: JSON.parse(localStorage.getItem('usuario')) || null,
-    }
-  },
-  methods: {
-    // Aquí puedes definir tus métodos
     logout() {
       localStorage.removeItem('usuario');
       this.usuario = null;
       console.log(this.usuario);
     }
-  },
-}).mount('#app2');
+    
 
-createApp({
-  data() {
-    return {
-      usuario: JSON.parse(localStorage.getItem('usuario')) || null,
-    }
-  },
-  methods: {
-    // Aquí puedes definir tus métodos
-  },
-}).mount('#app3');
+},
+}).mount('#app')
+
+
+
 
 function realizarCompra() {
 alert("¡Gracias por tu compra!");
