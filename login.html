@@ -3,10 +3,32 @@
   <head>
     <title>Iniciar sesión - Tienda de electrónicos</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
   </head>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="logo">
+            <img src="img/logo.png"  style="width: 600px; height: 200px;" alt="Logo">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <nav class="text-md-right">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="register.html">Registro</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
   <body>
     <div id="app">
       <h1>Iniciar sesión</h1>
@@ -27,8 +49,23 @@
       </div>
     </form>
     </div>
-    
-
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p class="rights">Derechos Reservados 2023</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- codigo script de vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
