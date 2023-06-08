@@ -149,3 +149,10 @@ nav ul li.selected a {
   font-size: 16px;
   margin-bottom: 5px;
 }
+.fd{
+  background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg');
+  /*   background-image: url('img/2302.w026.n002.3222B.p15.3222.jpg'); */
+  background-size: 2000px 2500px;
+  background-position-y: 40%;
+  background-repeat: no-repeat;
+}
