@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* Color de fondo del body */
+}
+
+header {
+  background-color:#343a40; /* Color de fondo del encabezado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.logo img {
+  width: 10px;
+  height: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul li.selected a {
+  background-color: #68D4E5; /* Color de fondo de la opción seleccionada */
+  padding: 10px 15px;
+  border-radius: 5px;
+
+}
+
+.footer {
+  background-color: #343a40; /* Color de fondo del footer */
+  color: #fff; /* Color de texto del footer */
+  padding: 20px;
+  margin-top: 20px; /* Margen superior para separar del contenido anterior */
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.rights {
+  text-align: right;
+  font-size: 14px;
+}
+
+
+ /* el hpta carrusel */
+
+#contenedor{
+  margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+  
+
+}
+#columnas{
+  background-color: #343a40;
+  border-radius: 10px; /* Redondear los bordes de la sección */
+
+}
+#columnas p{
+  color: white;
+}
+#columnas h2{
+  color: white;
+}
+
+ .information {
+  padding: 20px;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: -5px; /* Ajusta el valor según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: #fff;
+  background-color: #17a2b8;
+  opacity: 0.8;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px; /* Cambiamos el valor para hacer los botones cuadrados */
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 -50px; /* Ajusta el margen entre los botones según sea necesario */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.info-section {
+  background-color: #343a40; /* Color de fondo de la sección de información */
+  color: #fff; /* Color de texto de la sección de información */
+  padding: 50px 0;
+  border-radius: 10px; /* Redondear los bordes de la sección */
+  margin-top: 40px; /* Margen superior para separar del footer */
+}
+
+.info-content {
+  text-align: left;
+}
+
+.sub-section {
+  margin-bottom: 30px;
+}
+
+.sub-section h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sub-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sub-section ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}

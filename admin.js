@@ -3,18 +3,20 @@ formAgregarProducto.addEventListener('submit', function(event) {
   event.preventDefault();
   const nombre = document.getElementById('nombre').value;
   const precio = parseFloat(document.getElementById('precio').value);
-  const imagen = document.getElementById('imagen').value || "https://via.placeholder.com/200x200" ;
-  agregarProducto(nombre, precio, imagen);
+  const descripcion = document.getElementById('descripcion').value;
+  const imagen = document.getElementById('imagen').value || "https://via.placeholder.com/200x200";
+  agregarProducto(nombre, precio, descripcion, imagen);
   formAgregarProducto.reset();
 });
 
-function agregarProducto(nombre, precio, imagen) {
+function agregarProducto(nombre, precio, descripcion, imagen) {
   const productos = document.querySelector('.productos');
   const nuevoProducto = `
     <div class="producto">
-      <img src="${imagen}" alt="${nombre} style="width: 200px; height: 200px;">
+      <img src="${imagen}" alt="${nombre}">
       <h2>${nombre}</h2>
       <p>$${precio}</p>
+      <p class="descripcion">${descripcion}</p>
       <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
     </div>
   `;
@@ -25,3 +27,4 @@ function eliminarProducto(boton) {
   const producto = boton.parentNode;
   producto.remove();
 }
+  

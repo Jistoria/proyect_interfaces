@@ -9,10 +9,9 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{prueba}}</h1>
       <h1>Iniciar sesión</h1>
       <ul>
-        <li>{{ error }}</li>
+        {{ error }}
       </ul>
     <form @submit.prevent="login" action="index.html" method="post">
       <label for="email">Correo electrónico:</label>
@@ -33,7 +32,7 @@
 
     <!-- codigo script de vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="codigos/login.js"></script>
+    <script src="login.js"></script>
 
 
   </body>
