@@ -12,7 +12,7 @@ data() {
     contraseña:'',
     email:'',
     usuario: JSON.parse(localStorage.getItem('usuario')) || {},
-    emailadmin:'maestrojgcm@gmail.com',
+    emailadmin:'maestro@gmail.com',
 
  }
 },
